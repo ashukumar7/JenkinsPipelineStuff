@@ -1,0 +1,13 @@
+pipeline{
+  parallel{
+    stage('Tests RFSA'){
+    agent{docker { image 'node:MyAgentAshu' }}
+    steps{ echo "We will paste code for RFSA here..."}
+    }
+    stage('Tests Both'){
+    agent{docker { image 'node:MyTestNode' }}
+    steps{ echo "We will paste code for both RFSA and RFSG here..."}
+    }
+}
+}
+	
